@@ -7,4 +7,11 @@ void main() {
     }
     numero++;
   }
+
+  numero = 0;
+  
+  do{
+    print('Contando.. $numero');
+    numero++;
+  } while(numero <= 50);
 } 
