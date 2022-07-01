@@ -1,5 +1,5 @@
 void main() {
-  String fruta = 'abacaxi';
+  String fruta = 'banana';
 
   switch (fruta) {
     case 'morango':
