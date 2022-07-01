@@ -11,4 +11,14 @@ void main() {
     senha = int.parse(stdin.readLineSync()!);
   }
   print("Senha correta");
+
+
+int contador = 0;
+  do {
+    print('Contando $contador');
+    contador++;
+  } while (contador < 50);
+
+
+
 }
