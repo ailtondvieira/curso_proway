@@ -15,7 +15,6 @@ void main() {
       .split(','); //Separa a string de acordo com o parametro passado
   print(retorno);
   print(nomeDaVariavel.indexOf('t'));
-  print(nomeDaVariavel.indexOf('t'));
   print(nomeDaVariavel.replaceAll('teste', 'TROCOU'));
   print(nomeDaVariavel.replaceFirst('ok', 'TROCOU'));
   print(nomeDaVariavel.substring(4, 8));
