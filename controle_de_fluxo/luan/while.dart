@@ -11,6 +11,9 @@ void main() {
   do {
     print("Enchendo... ");
     mlAgua++;
-  } while (mlAgua <= 500);
-  print("Encheu");
+    if (mlAgua == 250) {
+      break;
+    }
+  } while (true);
+  print("Encheu pela metade");
 }
