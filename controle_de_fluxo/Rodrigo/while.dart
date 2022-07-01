@@ -6,12 +6,20 @@ void main() {
   while (count <= 50) {
     print('Contando... $count');
     count++;
+    if (count > 20) {
+      continue;
+    }
+    print('Não é maior que 20');
   }
   count = 0;
   // verifica depois de entrar pelo menos uma vez
   do {
     print('Contando... $count');
     count++;
+    if (count > 30) {
+      print('Chegou em 30');
+      break;
+    }
   } while (count <= 50);
 
   print('------------');
