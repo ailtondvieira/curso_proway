@@ -12,12 +12,14 @@ void main() {
   while (number != luckyNumber && attempt > 0) {
     print('Ainda não... Tente novamente!');
     print('Você ainda tem $attempt tentativas.');
-    int.parse(stdin.readLineSync()!);
+    int newNumber = int.parse(stdin.readLineSync()!);
     attempt--;
 
-    if (attempt == 0) {
-      print(
-          'Infelizmente, não foi dessa vez, o número escolhido era $luckyNumber');
+    if (newNumber == luckyNumber) {
+      print('Você acertou!');
+      break;
+    } else if (attempt == 0) {
+      print('Infelizmente, não foi dessa vez, o número escolhido era $luckyNumber');
     }
   }
 
