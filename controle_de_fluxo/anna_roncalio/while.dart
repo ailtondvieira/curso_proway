@@ -27,7 +27,7 @@ void main() {
     print('Você acertou!');
   }
 
-  //exemplo while e do-while
+  //exemplo do professor while e do-while
   int contador = 1;
 
   while (contador <= 50) {

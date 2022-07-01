@@ -1,7 +1,7 @@
 
 void main() {
 
-  // if / else
+  // exercicio if / else
   double temperaturaMinimaDia = 21; 
   
   if (temperaturaMinimaDia <= 20) {
@@ -18,4 +18,12 @@ void main() {
     print('Pode dormir mais');
   };
 
+  //exemplo professor
+  bool banhaEstaQuente = true;
+
+  if (banhaEstaQuente == true) {
+    print('Pode fritar o ovo.');
+  } else {
+    print('Esperar...');
+  }
 }
