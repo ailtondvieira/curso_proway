@@ -14,4 +14,11 @@ void main() {
     dinheiro += 25;
   }
   print('Agora você tem dinheiro suficiente, pode dar uns rolês!');
+
+  //Do while primeiro executa e depois verifica a condição
+
+  do {
+    print('Contando.. $contador');
+    contador++;
+  } while (contador <= 50);
 }
