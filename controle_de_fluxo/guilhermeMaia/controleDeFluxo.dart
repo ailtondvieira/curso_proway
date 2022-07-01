@@ -1,10 +1,10 @@
 void main () {
 
-  bool fome = true;
+  bool chegouNoPonto = true;
 
-  if (fome) {
-    print('Coma algo');
+  if (chegouNoPonto) {
+    print('Desca do ônibus e ande até a ProWay');
   } else {
-    print ('Não é necessário comer');
+    print ('Continue no ônibus');
   }
 }
