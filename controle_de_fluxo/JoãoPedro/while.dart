@@ -9,4 +9,16 @@ void main() {
     print("Saí do sleep.");
     vivo = false; // morro
   }
+  do {
+    print("entrei no while");
+    sleep(dez);
+    print("Saí do sleep.");
+    vivo = false; // morro
+  } while (vivo);
+
+  int cont = 2;
+  while (cont < double.infinity) {
+    print(cont);
+    cont *= 1000;
+  }
 }
