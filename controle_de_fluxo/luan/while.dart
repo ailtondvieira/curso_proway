@@ -5,5 +5,12 @@ void main() {
     print("Enchendo... ");
     mlAgua++;
   }
-  print("Encheu")
+  print("Encheu");
+
+  mlAgua = 0;
+  do {
+    print("Enchendo... ");
+    mlAgua++;
+  } while (mlAgua <= 500);
+  print("Encheu");
 }

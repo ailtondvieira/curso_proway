@@ -1,8 +1,5 @@
 void main() {
-  bool elevadorAbriu = true;
-  if (elevadorAbriu) {
-    print('Entrar');
-  } else {
-    print('Esperar');
-   }
+  for (int contador = 1; contador < 50; contador++) {
+    print("Contando... $contador");
+  }
 }
