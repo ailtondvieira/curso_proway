@@ -1,29 +1,46 @@
 import 'dart:io';
 
 void main() {
-  String? diaDaSemana = stdin.readLineSync()!;
+  print('''Informe o dia da semana, conforme o menu abaixo
+  1 - Domingo
+  2 - Segunda-feira
+  3 - Terça-feira
+  4 - Quarta-feira
+  5 - Quinta-feira
+  6 - Sexta-feira
+  7 - Sábado''');
+
+  int? item = int.parse(stdin.readLineSync()!);
+  String? diaDaSemana = '';
   String diaUtil = '';
 
-  switch (diaDaSemana) {
-    case 'Domingo':
+  switch (item) {
+    case 1:
+      diaDaSemana = 'Domingo';
       diaUtil = 'não é';
       break;
-    case 'Segunda-feira':
+    case 2:
+      diaDaSemana = 'Segunda-feira';
       diaUtil = 'é';
       break;
-    case 'Terça-feira':
+    case 3:
+      diaDaSemana = 'Terça-feira';
       diaUtil = 'é';
       break;
-    case 'Quarta-feira':
+    case 4:
+      diaDaSemana = 'Quarta-feira';
       diaUtil = 'é';
       break;
-    case 'Quinta-feira':
+    case 5:
+      diaDaSemana = 'Quinta-feira';
       diaUtil = 'é';
       break;
-    case 'Sexta-feira':
+    case 6:
+      diaDaSemana = 'Sexta-feira';
       diaUtil = 'é';
       break;
-    case 'Sábado':
+    case 7:
+      diaDaSemana = 'Sábado';
       diaUtil = 'não é';
       break;
     default:
