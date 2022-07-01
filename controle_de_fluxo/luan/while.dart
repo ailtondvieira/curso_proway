@@ -1,7 +1,9 @@
 void main() {
-  int contador = 1;
-  while (contador <= 50) {
-    print("Contando... $contador");
-    contador++;
+  //Garrafa d' água
+  int mlAgua = 0;
+  while (mlAgua <= 500) {
+    print("Enchendo... ");
+    mlAgua++;
   }
+  print("Encheu")
 }
