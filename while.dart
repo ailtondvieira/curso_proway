@@ -1,11 +1,14 @@
 //While - Controle de repetição
 
 void main () {
-  int i = 10;
+  int i = 1;
 
  //verifica primeiro e depois executa
-  while (i <= 12) {
+  while (i <= 50) {
     print(i);
+    if (i == 20){
+      break;
+    }
     i++;
   }
 
