@@ -3,6 +3,9 @@ void main() {
   int contador = 1;
   while (contador <= 50) {
     // print('Contanto... $contador');
+    if (contador == 20) {
+      break;
+    }
     contador++;
   }
 
