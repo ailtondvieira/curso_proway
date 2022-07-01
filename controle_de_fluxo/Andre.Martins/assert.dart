@@ -9,6 +9,6 @@ class Celular {
 
   Celular(this.name, this.model, this.imei)
       :assert(imei <= 10 && imei >= 0,
-      'IME inválido');
+      'IMEI inválido');
 
 }
