@@ -9,4 +9,14 @@ void main() {
         
   }
 
+  int cont = 0;
+
+  do {
+
+    print(cont);
+    cont++;
+
+
+  }while(cont < 15);
+
 }
