@@ -12,6 +12,8 @@ void main(List<String> args) {
     // Widget primordial
     home: HomePage(), // nome da homepage
     debugShowCheckedModeBanner: false, //tirar faixinha de debug da tela
+    theme: ThemeData.dark()
+        .copyWith(scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0)),
   ));
 }
 
@@ -62,11 +64,11 @@ class _HomePageState extends State<HomePage> {
                   const Text(
                     "Aperte o botão para trocar a imagem",
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 35,
                       color: Color.fromARGB(255, 255, 0, 0),
                     ),
                   ),
-                  const SizedBox(height: 20, width: 500),
+                  const SizedBox(height: 20, width: 150),
                   ElevatedButton(
                     onPressed: () {
                       setState(() {
@@ -80,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                 ],
                 mainAxisAlignment: MainAxisAlignment.center,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 75),
               Image.network(
                 linkUsado,
               ),
