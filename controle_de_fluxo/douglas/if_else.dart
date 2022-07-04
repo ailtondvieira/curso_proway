@@ -7,14 +7,14 @@ void main() {
 
   Motorista barbeiro = Motorista();
 
-  //aconteceuAcidente = barbeiro.acidente();
+  aconteceuAcidente = barbeiro.acidente();
 
   if (aconteceuAcidente) {
     transitoCongestionado = true;
     horaDeChegada = 8.10;
   }
   if (horaDeChegada > 8) {
-    chamada = 'falta';
+    chamada = 'atrasado';
   } else {
     chamada = 'presente';
   }
