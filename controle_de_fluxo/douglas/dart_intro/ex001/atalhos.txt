@@ -1,0 +1,4 @@
+ctrl + . # gerador de construtor
+ctrl + ; # comentarios
+//TODO: comentario com warning
+//comentario [fica em destaque o que esta entre conchetes]
