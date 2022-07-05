@@ -72,18 +72,24 @@ class _HomePageState extends State<HomePage> {
                         Icon(Icons.ac_unit_sharp),
                         Padding(
                           padding: EdgeInsets.only(left: 15),
-                          child: Text("100 graus"),
+                          child: Text(
+                            "100 graus",
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 20,
+                            ),
+                          ),
                         ),
                       ],
                     ),
                     const SizedBox(
-                      height: 100,
+                      height: 80,
                       width: 100,
                     ),
                     Text(
                       "Eita",
                       style: TextStyle(
-                        fontSize: 24,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                         color: Colors.grey.shade900,
                       ),
