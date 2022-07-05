@@ -17,13 +17,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Widget novoWidget = const Text("");
+  String count = '01';
 
   Widget chamarCaixas = SingleChildScrollView(
     child: Center(
       child: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             width: 50,
             height: 50,
           ),
@@ -35,11 +35,12 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 0, 0),
                   borderRadius: BorderRadius.circular(30),
-                  //image: DecorationImage(
-                  //image: Image.network(
-                  //"https://ae01.alicdn.com/kf/H2b9c91def5794651930b39282b8bacb4m/Higanbana-kit-de-acess-rios-para-cabelo-folheado-em-flor-para-iniciantes-cl-ssicos-artesanais.jpg",
-                  // ),
-                  // ),
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 255, 0, 0),
+                      Color.fromARGB(255, 0, 0, 0),
+                    ],
+                  ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.red.shade800,
@@ -67,25 +68,25 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             "Imagens Loucas",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       "Eita",
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade900,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 50,
                 height: 50,
               ),
@@ -95,11 +96,12 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 0, 0),
                   borderRadius: BorderRadius.circular(30),
-                  //image: DecorationImage(
-                  //image: Image.network(
-                  //"https://ae01.alicdn.com/kf/H2b9c91def5794651930b39282b8bacb4m/Higanbana-kit-de-acess-rios-para-cabelo-folheado-em-flor-para-iniciantes-cl-ssicos-artesanais.jpg",
-                  // ),
-                  // ),
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 255, 0, 0),
+                      Color.fromARGB(255, 0, 0, 0),
+                    ],
+                  ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.red.shade800,
@@ -127,19 +129,19 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             "Imagens Loucas",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       "Eita",
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade900,
+                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -147,7 +149,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             width: 50,
             height: 50,
           ),
@@ -159,11 +161,12 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 0, 0),
                   borderRadius: BorderRadius.circular(30),
-                  //image: DecorationImage(
-                  //image: Image.network(
-                  //"https://ae01.alicdn.com/kf/H2b9c91def5794651930b39282b8bacb4m/Higanbana-kit-de-acess-rios-para-cabelo-folheado-em-flor-para-iniciantes-cl-ssicos-artesanais.jpg",
-                  // ),
-                  // ),
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 255, 0, 0),
+                      Color.fromARGB(255, 0, 0, 0),
+                    ],
+                  ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.red.shade800,
@@ -191,25 +194,25 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             "Imagens Loucas",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       "Eita",
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade900,
+                        color: Colors.white,
                       ),
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 50,
                 height: 50,
               ),
@@ -217,13 +220,14 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(16),
                 margin: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color.fromARGB(255, 255, 0, 0),
+                      Color.fromARGB(255, 0, 0, 0),
+                    ],
+                  ),
                   color: const Color.fromARGB(255, 255, 0, 0),
                   borderRadius: BorderRadius.circular(30),
-                  //image: DecorationImage(
-                  //image: Image.network(
-                  //"https://ae01.alicdn.com/kf/H2b9c91def5794651930b39282b8bacb4m/Higanbana-kit-de-acess-rios-para-cabelo-folheado-em-flor-para-iniciantes-cl-ssicos-artesanais.jpg",
-                  // ),
-                  // ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.red.shade800,
@@ -251,19 +255,19 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             "Imagens Loucas",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                             ),
                           ),
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       "Eita",
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade900,
+                        color: Colors.white,
                       ),
                     ),
                   ],
@@ -284,12 +288,18 @@ class _HomePageState extends State<HomePage> {
       decoration: BoxDecoration(
         color: Colors.green,
         borderRadius: BorderRadius.circular(16),
+        gradient: const LinearGradient(
+          colors: [
+            Color.fromARGB(255, 0, 255, 0),
+            Color.fromARGB(255, 0, 0, 0)
+          ],
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.green.shade900,
             blurRadius: 2,
             spreadRadius: 10,
-            offset: Offset(3, 3),
+            offset: const Offset(3, 3),
           ),
         ],
       ),
@@ -302,8 +312,12 @@ class _HomePageState extends State<HomePage> {
               Icon(
                 Icons.light,
                 size: 40,
+                color: Color.fromARGB(255, 255, 255, 255),
               ),
-              Icon(Icons.circle),
+              Icon(
+                Icons.circle,
+                color: Color.fromARGB(255, 255, 255, 255),
+              ),
             ],
           ),
           const SizedBox(height: 25),
@@ -315,6 +329,7 @@ class _HomePageState extends State<HomePage> {
                   "Lamp",
                   style: TextStyle(
                     fontSize: 20,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 15),
@@ -322,6 +337,7 @@ class _HomePageState extends State<HomePage> {
                   "Opened",
                   style: TextStyle(
                     fontSize: 16,
+                    color: Colors.white,
                   ),
                 ),
               ],
@@ -367,9 +383,9 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 0, 0),
                   borderRadius: BorderRadius.circular(30),
-                  image: const DecorationImage(
+                  image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage('../img/01.jpg'),
+                    image: AssetImage('../img/$count.jpg'),
                   ),
                   boxShadow: [
                     BoxShadow(
@@ -398,7 +414,7 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             "Imagens Loucas",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 20,
                             ),
                           ),
@@ -410,6 +426,7 @@ class _HomePageState extends State<HomePage> {
                         setState(
                           () {
                             caixas = chamarCaixas;
+                            count = '02';
                           },
                         );
                       },
@@ -451,7 +468,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(left: 10),
               children: [
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -470,7 +487,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -489,7 +506,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -508,7 +525,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -527,7 +544,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -546,7 +563,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -565,7 +582,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -584,7 +601,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -603,7 +620,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -622,7 +639,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -641,7 +658,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -660,7 +677,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -679,7 +696,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -698,7 +715,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -717,7 +734,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -736,7 +753,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -755,7 +772,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
                       setState(
@@ -789,10 +806,6 @@ class _HomePageState extends State<HomePage> {
           ),
           const SizedBox(
             height: 50,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [],
           ),
         ],
       ),
