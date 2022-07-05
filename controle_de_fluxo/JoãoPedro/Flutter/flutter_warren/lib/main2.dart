@@ -282,15 +282,17 @@ class _HomePageState extends State<HomePage> {
       width: 175,
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
       decoration: BoxDecoration(
-          color: Colors.green,
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-                color: Colors.green.shade500,
-                blurRadius: 5,
-                spreadRadius: 10,
-                offset: Offset(2, 8))
-          ]),
+        color: Colors.green,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.green.shade900,
+            blurRadius: 2,
+            spreadRadius: 10,
+            offset: Offset(3, 3),
+          ),
+        ],
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -365,11 +367,10 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 255, 0, 0),
                   borderRadius: BorderRadius.circular(30),
-                  // image: DecorationImage(
-                  // image: Image.network(
-                  // "https://ae01.alicdn.com/kf/H2b9c91def5794651930b39282b8bacb4m/Higanbana-kit-de-acess-rios-para-cabelo-folheado-em-flor-para-iniciantes-cl-ssicos-artesanais.jpg",
-                  // ),
-                  // ),
+                  image: const DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage('../img/01.jpg'),
+                  ),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.red.shade800,
@@ -421,12 +422,12 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(color: Colors.black),
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Eita",
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
-                        color: Colors.grey.shade900,
+                        color: Colors.red,
                       ),
                     ),
                   ],
@@ -453,9 +454,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -470,9 +473,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -487,9 +492,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -504,9 +511,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -521,9 +530,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -538,9 +549,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -555,9 +568,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -572,9 +587,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -589,9 +606,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -606,9 +625,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -623,9 +644,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -640,9 +663,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -657,9 +682,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -674,9 +701,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -691,9 +720,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -708,9 +739,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -725,9 +758,11 @@ class _HomePageState extends State<HomePage> {
                   padding: EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        caixas = chamarCaixas;
-                      });
+                      setState(
+                        () {
+                          caixas = chamarCaixas;
+                        },
+                      );
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -749,7 +784,7 @@ class _HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               caixas,
-              caixas,
+              //caixas,
             ],
           ),
           const SizedBox(
