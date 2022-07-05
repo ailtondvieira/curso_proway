@@ -1,7 +1,3 @@
-import 'dart:html';
-
-import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
 
 import 'dart:math';
@@ -10,20 +6,21 @@ void main(List<String> args) {
   runApp(// runApp roda o app
       MaterialApp(
     // Widget primordial
-    home: HomePage(), // nome da homepage
+    home: const HomePage(), // nome da homepage
     debugShowCheckedModeBanner: false, //tirar faixinha de debug da tela
     theme: ThemeData.dark()
-        .copyWith(scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0)),
+        .copyWith(scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0)),
   ));
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  // fazendo tela sem estado, stateless
   List<String> links = [
     "https://www.floreseflores.com.br/wp-content/uploads/2012/05/Higanbana_closeup.jpg",
     "https://ae01.alicdn.com/kf/H2b9c91def5794651930b39282b8bacb4m/Higanbana-kit-de-acess-rios-para-cabelo-folheado-em-flor-para-iniciantes-cl-ssicos-artesanais.jpg",
@@ -33,17 +30,18 @@ class _HomePageState extends State<HomePage> {
   String linkUsado =
       "https://imgs.casasbahia.com.br/1512225236/1xg.jpg?imwidth=500";
   var numerorandom = Random();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       //esqueleto do codigo do app, sempre tem 1
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         title: Text(
           "Trocador de Imagem",
           style: TextStyle(
             fontSize: 15,
-            color: Color.fromARGB(255, 255, 255, 255),
+            color: const Color.fromARGB(255, 255, 255, 255),
             decoration: TextDecoration.combine(
               [
                 TextDecoration.lineThrough,
@@ -58,36 +56,43 @@ class _HomePageState extends State<HomePage> {
         child: Center(
           //widget pra centralizar os objetos dentro
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
                     "Aperte o botão para trocar a imagem",
                     style: TextStyle(
-                      fontSize: 35,
+                      fontSize: 20,
                       color: Color.fromARGB(255, 255, 0, 0),
                     ),
                   ),
-                  const SizedBox(height: 20, width: 150),
+                  const SizedBox(height: 20, width: 100),
                   ElevatedButton(
                     onPressed: () {
-                      setState(() {
-                        linkUsado = links[numerorandom.nextInt(4)];
-                      });
+                      setState(
+                        () {
+                          linkUsado = links[numerorandom.nextInt(4)];
+                        },
+                      );
                     },
-                    child: Text("Mudando Imagem"),
                     style: ElevatedButton.styleFrom(
-                        textStyle: const TextStyle(fontSize: 20)),
+                      primary: const Color.fromARGB(255, 255, 0, 0),
+                      textStyle: const TextStyle(
+                        fontSize: 20,
+                        color: Color.fromARGB(255, 0, 0, 0),
+                      ),
+                    ),
+                    child: const Text("Mudando Imagem"),
                   ),
                 ],
-                mainAxisAlignment: MainAxisAlignment.center,
               ),
-              SizedBox(height: 75),
+              const SizedBox(height: 150),
               Image.network(
                 linkUsado,
               ),
             ],
-            mainAxisAlignment: MainAxisAlignment.center,
           ),
         ),
       ),
