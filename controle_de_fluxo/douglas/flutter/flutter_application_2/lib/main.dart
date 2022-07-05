@@ -542,17 +542,39 @@ class HomePage extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                             color: Colors.blue,
-                            borderRadius: BorderRadius.circular(20)),
+                            borderRadius: BorderRadius.circular(10)),
                         padding: EdgeInsets.all(10),
                         width: 300,
                         // color: Colors.amber,
-                        child: const Text(
-                          'teste',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 22,
-                            fontWeight: FontWeight.w600,
-                          ),
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [Icon(Icons.circle)],
+                            ),
+                            Column(
+                              children: const [
+                                Text(
+                                  'teste',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 22,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                                Text(
+                                  'teste',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Icon(Icons.fast_rewind),
+                            Icon(Icons.pause),
+                            Icon(Icons.fast_forward),
+                          ],
                         ),
                       ),
                     ],
