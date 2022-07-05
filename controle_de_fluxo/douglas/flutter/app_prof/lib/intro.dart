@@ -16,7 +16,7 @@ String img =
 String imgAux =
     'https://www.altoastral.com.br/media/uploads/legacy/2016/10/senhor-chapeu-mulheres-corpos-ilusao-otica-imagens.jpg';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   //--> Classe StatelessWidget
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
             style: TextStyle(color: Color.fromARGB(255, 168, 27, 27)),
           ),
           const SizedBox(height: 20),
-          Image.network(img),
+          Image.network('$img'),
           const SizedBox(height: 20),
           ElevatedButton(
               onPressed: () {
@@ -46,5 +46,11 @@ class HomePage extends StatelessWidget {
         ],
       )),
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }
