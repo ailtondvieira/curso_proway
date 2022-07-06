@@ -1,24 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_warren/next_page.dart';
 
-void main(List<String> args) {
-  runApp(
-    const MaterialApp(
-      title: "App Treinando",
-      home: HomePage(),
-      debugShowCheckedModeBanner: false,
-    ),
-  );
-}
-
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class NextPage extends StatefulWidget {
+  const NextPage({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<NextPage> createState() => _NextPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _NextPageState extends State<NextPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +22,7 @@ class _HomePageState extends State<HomePage> {
               width: 10,
             ),
             Text(
-              "Spotufy",
+              "Spotuy",
               style: TextStyle(
                   color: Colors.green,
                   fontSize: 30,
@@ -55,29 +44,13 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.black,
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconButton(
-                        onPressed: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: ((context) {
-                                return const NextPage();
-                              }),
-                            ),
-                          );
-                        },
-                        icon: const Icon(
-                          Icons.arrow_back,
-                          color: Color.fromARGB(255, 255, 255, 255),
-                          size: 40,
-                        ),
-                      ),
-                      const Icon(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: const [
+                      Icon(
                         Icons.menu,
                         color: Color.fromARGB(255, 255, 255, 255),
                         size: 40,
-                      ),
+                      )
                     ],
                   ),
                 ),
@@ -139,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           const Icon(
                             Icons.favorite,
-                            color: Color.fromARGB(220, 255, 0, 0),
+                            color: Color.fromARGB(255, 255, 255, 255),
                             size: 40,
                           ),
                           const Icon(
