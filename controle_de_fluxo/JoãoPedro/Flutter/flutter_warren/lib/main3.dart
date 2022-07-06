@@ -51,9 +51,6 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 18),
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [

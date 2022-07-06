@@ -12,6 +12,16 @@ class _NextPageState extends State<NextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(
+            Icons.arrow_circle_left,
+            color: Color.fromARGB(255, 0, 255, 0),
+            size: 30,
+          ),
+        ),
         title: Row(
           children: const [
             Icon(
@@ -104,7 +114,6 @@ class _NextPageState extends State<NextPage> {
                   height: 10,
                 ),
                 Container(
-                  decoration: const BoxDecoration(color: Colors.black),
                   child: Column(
                     children: [
                       Row(
