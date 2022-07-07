@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 
-import '../../home/widgets/blackened_header_home.dart';
 import '../../home/widgets/container_header_home.dart';
 import '../../home/widgets/container_music_image_home.dart';
-import '../../home/widgets/creeping_header_home.dart';
-import '../../home/widgets/padding_fade_to_black_home.dart';
+import '../../home/widgets/more_music_home.dart';
 import '../../home/widgets/padding_grey_line_home.dart';
 import '../../home/widgets/padding_more_see_all_home.dart';
 import '../../home/widgets/row_play_home.dart';
@@ -43,21 +41,36 @@ class BodyNextPage extends StatelessWidget {
               ),
               Column(
                 children: [
-                  RowPlayHome(player: player),
+                  RowPlayHome(
+                    player: player,
+                    assetsPlay: '../assets/audios/Escape.mp3',
+                  ),
                   const PaddingGreyLineHome(),
                   const PaddingMoreSeAllHome(),
                   const SizedBox(
                     height: 10,
                   ),
-                  const PaddingFadeToBlackHome(),
+                  const MoreMusicHome(
+                    assetPath: "../img/Metallica_album.jpg",
+                    title: "Fade To Black",
+                    banda: "Metallica",
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const CreepingHeaderHome(),
+                  const MoreMusicHome(
+                    assetPath: "../img/Metallica_album.jpg",
+                    title: "Creeping Death",
+                    banda: "Metallica",
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const BlackenedHeaderHome(),
+                  const MoreMusicHome(
+                    assetPath: "../img/Metallica_album.jpg",
+                    title: "Blackened",
+                    banda: "Metallica",
+                  ),
                 ],
               ),
             ],

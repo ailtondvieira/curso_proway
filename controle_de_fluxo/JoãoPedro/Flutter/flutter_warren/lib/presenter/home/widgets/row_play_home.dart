@@ -5,9 +5,11 @@ class RowPlayHome extends StatefulWidget {
   const RowPlayHome({
     Key? key,
     required this.player,
+    required this.assetsPlay,
   }) : super(key: key);
 
   final AudioPlayer player;
+  final String assetsPlay;
 
   @override
   State<RowPlayHome> createState() => _RowPlayHomeState();
@@ -32,7 +34,6 @@ class _RowPlayHomeState extends State<RowPlayHome> {
 
   @override
   Widget build(BuildContext context) {
-    widget.player.setAsset('../assets/audios/Escape.mp3');
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -67,9 +68,11 @@ class _RowPlayHomeState extends State<RowPlayHome> {
         ),
         IconButton(
           onPressed: () {
-            setState(() {
-              download = Icons.download_done;
-            });
+            setState(
+              () {
+                download = Icons.download_done;
+              },
+            );
           },
           icon: Icon(
             download,
@@ -111,8 +114,8 @@ class _RowPlayHomeState extends State<RowPlayHome> {
                     contButtonPlay++;
                     iconPlay = Icons.pause;
                     textoPlay = "Pause";
+                    duracao = widget.player.position;
                     if (widget.player.playing == true) {
-                      duracao = widget.player.position;
                       widget.player.pause();
                       iconPlay = Icons.play_arrow;
                       textoPlay = "Play";
@@ -121,6 +124,7 @@ class _RowPlayHomeState extends State<RowPlayHome> {
                         widget.player.seek(duracao);
                         widget.player.play();
                       } else {
+                        widget.player.setAsset(widget.assetsPlay);
                         widget.player.play();
                       }
                     }

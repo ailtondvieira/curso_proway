@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
-class PaddingFadeToBlackHome extends StatelessWidget {
-  const PaddingFadeToBlackHome({
+class MoreMusicHome extends StatelessWidget {
+  final String assetPath;
+  final String title;
+  final String banda;
+  const MoreMusicHome({
     Key? key,
+    required this.assetPath,
+    required this.title,
+    required this.banda,
   }) : super(key: key);
 
   @override
@@ -20,29 +26,28 @@ class PaddingFadeToBlackHome extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: Colors.red,
-                  image: const DecorationImage(
-                      image: AssetImage("../img/Metallica_album.jpg"),
-                      fit: BoxFit.cover),
+                  image: DecorationImage(
+                      image: AssetImage(assetPath), fit: BoxFit.cover),
                 ),
               ),
             ],
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               Text(
-                "Fade To Black",
-                style: TextStyle(
+                title,
+                style: const TextStyle(
                     color: Colors.white,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
-                "Metallica",
-                style: TextStyle(
+                banda,
+                style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 18,
                 ),
