@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ContainerLamp extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final bool isOpened;
+  final Color colorBackgrond;
+
   const ContainerLamp({
     Key? key,
+    required this.icon,
+    required this.title,
+    required this.isOpened,
+    required this.colorBackgrond,
   }) : super(key: key);
 
   @override
@@ -19,10 +28,10 @@ class ContainerLamp extends StatelessWidget {
               offset: Offset(2, 8),
             ),
           ],
-          color: Color.fromARGB(255, 250, 253, 255),
+          color: colorBackgrond,
           borderRadius: BorderRadius.circular(20),
         ),
-        width: 180,
+        width: 150,
         padding: const EdgeInsets.symmetric(
           horizontal: 10,
           vertical: 20,
@@ -32,16 +41,15 @@ class ContainerLamp extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                Icon(
-                  Icons.light,
+              children:  [
+                Icon(icon,
                   size: 40,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
                 Icon(
                   Icons.circle,
                   size: 20,
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ],
             ),
@@ -52,21 +60,21 @@ class ContainerLamp extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children:  [
                   Text(
-                    'Lamp',
-                    style: TextStyle(
+                    title,
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                   Text(
-                    'Opened',
-                    style: TextStyle(
+                    isOpened ? 'Aberto'  : 'Fechado',
+                    style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   )
                 ],
@@ -77,7 +85,13 @@ class ContainerLamp extends StatelessWidget {
       ),
     );
   }
+
+  String getTextOpened(bool isOpened){
+    if (isOpened) {
+      return 'Aberto';
+    } else {
+      return 'Fechado';
+    }
+  }
+
 }
-
-
-

@@ -8,6 +8,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_constructors
     return Scaffold(
       // appBar: AppBar(
       //   title: const Text("App Desafio1"),
@@ -27,8 +28,7 @@ class HomePage extends StatelessWidget {
       // ),
 
       //backgroundColor: Color.fromARGB(255, 0, 0, 0),
-      body: BodyHome(),
-      
+      body: const BodyHome(),
     );
   }
 }

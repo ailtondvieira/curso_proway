@@ -45,10 +45,30 @@ class BodyHome extends StatelessWidget {
               children: [
                 Wrap(
                   children: const [
-                    ContainerLampBlue(),
-                    ContainerLamp(),
-                    ContainerLamp(),
-                    ContainerLamp(),
+                    ContainerLampBlue(
+                      icon: Icons.one_k,
+                      title: 'container1',
+                      isOpened: true,
+                      colorBackgrond: Colors.amber,
+                    ),
+                    ContainerLamp(
+                      icon: Icons.two_k,
+                      title: 'container2',
+                      isOpened: true,
+                      colorBackgrond: Color.fromARGB(255, 160, 153, 133),
+                    ),
+                    ContainerLamp(
+                      icon: Icons.three_k,
+                      title: 'container3',
+                      isOpened: true,
+                      colorBackgrond: Color.fromARGB(255, 73, 75, 105),
+                    ),
+                    ContainerLamp(
+                      icon: Icons.four_k,
+                      title: 'continer4',
+                      isOpened: false,
+                      colorBackgrond: Color.fromARGB(255, 70, 99, 67),
+                    ),
                   ],
                 ),
                 // const RowCardsLamp(),
