@@ -18,31 +18,69 @@ class _RowPlayHomeState extends State<RowPlayHome> {
 
   String textoPlay = "Play";
 
+  Color favorito = const Color.fromARGB(255, 255, 255, 255);
+
+  IconData playlist = Icons.playlist_add;
+
+  IconData download = Icons.download;
+
+  Duration? duracao;
+
+  int contButtonPlay = 0;
+
+  int contButtonFav = 0;
+
   @override
   Widget build(BuildContext context) {
     widget.player.setAsset('../assets/audios/Escape.mp3');
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        const Icon(
-          Icons.favorite,
-          color: Color.fromARGB(220, 255, 0, 0),
-          size: 40,
+        IconButton(
+          onPressed: () {
+            setState(() {
+              contButtonFav++;
+              if (contButtonFav % 2 != 0) {
+                favorito = const Color.fromARGB(255, 255, 0, 0);
+              } else {
+                favorito = const Color.fromARGB(255, 255, 255, 255);
+              }
+            });
+          },
+          icon: Icon(
+            Icons.favorite,
+            color: favorito,
+            size: 25,
+          ),
         ),
-        const Icon(
-          Icons.playlist_add,
-          color: Color.fromARGB(255, 255, 255, 255),
-          size: 40,
+        IconButton(
+          onPressed: () {
+            setState(() {
+              playlist = Icons.playlist_add_check;
+            });
+          },
+          icon: Icon(
+            playlist,
+            color: const Color.fromARGB(255, 255, 255, 255),
+            size: 25,
+          ),
         ),
-        const Icon(
-          Icons.download,
-          color: Color.fromARGB(255, 255, 255, 255),
-          size: 40,
+        IconButton(
+          onPressed: () {
+            setState(() {
+              download = Icons.download_done;
+            });
+          },
+          icon: Icon(
+            download,
+            color: const Color.fromARGB(255, 255, 255, 255),
+            size: 25,
+          ),
         ),
         const Icon(
           Icons.more_vert,
           color: Color.fromARGB(255, 255, 255, 255),
-          size: 40,
+          size: 25,
         ),
         const SizedBox(
           width: 100,
@@ -63,16 +101,28 @@ class _RowPlayHomeState extends State<RowPlayHome> {
                   color: const Color.fromARGB(255, 255, 255, 255),
                   size: 25,
                 ),
-                onPressed: () async {
+                onPressed: () {
+                  // setState(() {
+                  //   contButton++;
+                  //   iconPlay = Icons.pause;
+                  //   textoPlay = "Pause";
+                  // });
                   setState(() {
+                    contButtonPlay++;
                     iconPlay = Icons.pause;
                     textoPlay = "Pause";
                     if (widget.player.playing == true) {
+                      duracao = widget.player.position;
                       widget.player.pause();
                       iconPlay = Icons.play_arrow;
                       textoPlay = "Play";
                     } else {
-                      widget.player.play();
+                      if (contButtonPlay > 1) {
+                        widget.player.seek(duracao);
+                        widget.player.play();
+                      } else {
+                        widget.player.play();
+                      }
                     }
                   });
                 },
