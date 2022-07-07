@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../home/widgets/blackened_header_home.dart';
 import 'package:just_audio/just_audio.dart';
+
+import '../../home/widgets/blackened_header_home.dart';
 import '../../home/widgets/container_header_home.dart';
 import '../../home/widgets/container_music_image_home.dart';
 import '../../home/widgets/creeping_header_home.dart';

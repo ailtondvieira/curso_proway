@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_warren/presenter/home/widgets/body_home_page.dart';
 import 'package:just_audio/just_audio.dart';
+
+import 'package:flutter_warren/presenter/home/widgets/body_home_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

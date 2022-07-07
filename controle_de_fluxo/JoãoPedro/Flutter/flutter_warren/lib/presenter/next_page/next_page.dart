@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_warren/presenter/next_page/widgets/body_next_page.dart';
 import 'package:just_audio/just_audio.dart';
+
+import 'package:flutter_warren/presenter/next_page/widgets/body_next_page.dart';
 
 class NextPage extends StatefulWidget {
   const NextPage({Key? key}) : super(key: key);
