@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter_warren/presenter/home/widgets/padding_fade_to_black_home.dart';
-import 'package:flutter_warren/presenter/home/widgets/padding_grey_line_home.dart';
-import 'package:flutter_warren/presenter/home/widgets/padding_more_see_all_home.dart';
-import 'package:flutter_warren/presenter/home/widgets/row_play_home.dart';
-import 'package:flutter_warren/presenter/home/widgets/text_music_title_home.dart';
 import 'package:just_audio/just_audio.dart';
+
 import 'blackened_header_home.dart';
 import 'container_header_home.dart';
 import 'container_music_image_home.dart';
 import 'creeping_header_home.dart';
+import 'padding_fade_to_black_home.dart';
+import 'padding_grey_line_home.dart';
+import 'padding_more_see_all_home.dart';
+import 'row_play_home.dart';
+import 'text_music_title_home.dart';
 
 class BodyHomePage extends StatelessWidget {
   const BodyHomePage({
@@ -22,6 +22,7 @@ class BodyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
           Column(
