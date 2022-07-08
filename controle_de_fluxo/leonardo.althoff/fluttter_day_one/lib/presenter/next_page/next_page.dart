@@ -19,6 +19,7 @@ class NextPage extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             Image.asset(imgWeather),

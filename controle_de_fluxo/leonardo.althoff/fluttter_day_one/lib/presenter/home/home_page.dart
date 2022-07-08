@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue.shade400,
         actions: [
           IconButton(
             onPressed: () {
@@ -35,7 +36,10 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      body: const BodyHome(),
+      body: const SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: BodyHome(),
+      ),
     );
   }
 }

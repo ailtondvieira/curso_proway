@@ -10,14 +10,14 @@ class MusicContainerFooter extends StatelessWidget {
     return Center(
       child: Container(
         height: 80,
-        width: 450,
-        margin: EdgeInsets.all(15),
+        width: 350,
+        margin: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(30)),
           gradient: LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-              colors: [Colors.blue.shade100, Colors.blue.shade300]),
+              colors: [Colors.blue.shade200, Colors.blue.shade400]),
         ),
         child: Row(
           children: const [
@@ -29,16 +29,16 @@ class MusicContainerFooter extends StatelessWidget {
                 size: 30,
               ),
             ),
-            SizedBox(width: 30),
+            SizedBox(width: 10),
             Text(
               "Name of the song",
               style: TextStyle(
                 color: Colors.black87,
-                fontSize: 25,
+                fontSize: 20,
                 fontStyle: FontStyle.italic,
               ),
             ),
-            SizedBox(width: 60),
+            SizedBox(width: 25),
             Icon(
               Icons.skip_previous,
               color: Colors.black45,
