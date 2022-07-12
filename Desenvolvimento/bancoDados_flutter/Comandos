@@ -1,22 +1,32 @@
 Select (Sleciona alguma coisa), O "*" Sleciona tudo da lista, From da onde voce quer o dado
 Ex:(Select * From ... / Select ... From ...) 
+
 ============
+
 Distinct -> você diz qual valor não que pegar da tabela
+
 ============
+
 Where -> Serve para você passar uma condição com ele temos os operadores logicos
 
-(Like -> )
+(Like -> "%Condição%")
 
 ( = / > / < / >= / <= / <> Diferente de em sql).
+
 ============
+
 Operadores AND, OR e NOT -> Pode colocar mais de um condição Ex:
 
 (Where ... AND ... And ... And ..)
+
 ============
+
 DROP BY -> Serve para pegar os itens em ordem crescente ou decrescente, Para decrescente deve colocar DESC no final, Podemos tambem colocar mais de uma "coluna". "Isso significa que ele ordena por País, mas se algumas linhas tiverem o mesmo País, ele as ordena por NomeDoCliente"
 
 Ex's: DROP BY Country; // DROP BR Conutry DESC; // DROP BY Country,City;
+
 ============
+
 INSERT INTO -> Ele adiciona valores a lista, existem 2 modos para você adicionar esses valores,
 
 Especifique os nomes das colunas e os valores a serem inseridos:
@@ -30,4 +40,34 @@ Se você for adicionar os valores em todas as colunas você pode fazer do seguin
 INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 )
+
+============
+
+NULL -> é um campo sem valor, o valor NULL é diferente de zero ou espaço em branco.
+
+Ex:
+IS NULL
+(
+SELECT column_names
+FROM table_name
+WHERE column_name IS NULL;
+)
+IS NOT NULL
+(
+SELECT column_names
+FROM table_name
+WHERE column_name IS NOT NULL;
+)
+
+============
+
+UPDATE -> Usado para modificar registros existentes em uma tabela.
+
+Ex:
+(
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+)
+
 ============
