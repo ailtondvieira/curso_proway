@@ -1,0 +1,33 @@
+Select (Sleciona alguma coisa), O "*" Sleciona tudo da lista, From da onde voce quer o dado
+Ex:(Select * From ... / Select ... From ...) 
+============
+Distinct -> você diz qual valor não que pegar da tabela
+============
+Where -> Serve para você passar uma condição com ele temos os operadores logicos
+
+(Like -> )
+
+( = / > / < / >= / <= / <> Diferente de em sql).
+============
+Operadores AND, OR e NOT -> Pode colocar mais de um condição Ex:
+
+(Where ... AND ... And ... And ..)
+============
+DROP BY -> Serve para pegar os itens em ordem crescente ou decrescente, Para decrescente deve colocar DESC no final, Podemos tambem colocar mais de uma "coluna". "Isso significa que ele ordena por País, mas se algumas linhas tiverem o mesmo País, ele as ordena por NomeDoCliente"
+
+Ex's: DROP BY Country; // DROP BR Conutry DESC; // DROP BY Country,City;
+============
+INSERT INTO -> Ele adiciona valores a lista, existem 2 modos para você adicionar esses valores,
+
+Especifique os nomes das colunas e os valores a serem inseridos:
+(
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...); 
+)
+
+Se você for adicionar os valores em todas as colunas você pode fazer do seguinte modo, os valores devem seguir a seguencia das colunas.
+(
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+)
+============
