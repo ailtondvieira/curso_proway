@@ -21,7 +21,7 @@ Operadores AND, OR e NOT -> Pode colocar mais de um condição Ex:
 
 ============
 
-DROP BY -> Serve para pegar os itens em ordem crescente ou decrescente, Para decrescente deve colocar DESC no final, Podemos tambem colocar mais de uma "coluna". "Isso significa que ele ordena por País, mas se algumas linhas tiverem o mesmo País, ele as ordena por NomeDoCliente"
+ORDER BY -> Serve para pegar os itens em ordem crescente ou decrescente, Para decrescente deve colocar DESC no final, Podemos tambem colocar mais de uma "coluna". "Isso significa que ele ordena por País, mas se algumas linhas tiverem o mesmo País, ele as ordena por NomeDoCliente"
 
 Ex's: DROP BY Country; // DROP BR Conutry DESC; // DROP BY Country,City;
 
