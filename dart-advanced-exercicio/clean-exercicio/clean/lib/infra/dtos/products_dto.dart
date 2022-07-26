@@ -8,14 +8,17 @@ class ProductsDto extends ProductEntity {
   int qtdDTO;
   String brandDTO;
   String categoryDTO;
+  int idDTO;
 
   ProductsDto({
+    required this.idDTO,
     required this.nameDTO,
     required this.priceDTO,
     required this.qtdDTO,
     required this.brandDTO,
     required this.categoryDTO,
   }) : super(
+    id: idDTO,
           brand: brandDTO,
           name: nameDTO,
           price: priceDTO,
@@ -32,12 +35,14 @@ class ProductsDto extends ProductEntity {
     result.addAll({'qtdDTO': qtdDTO});
     result.addAll({'brandDTO': brandDTO});
     result.addAll({'categoryDTO': categoryDTO});
+    result.addAll({'idDTO': idDTO});
   
     return result;
   }
 
   factory ProductsDto.fromMap(Map<String, dynamic> map) {
     return ProductsDto(
+      idDTO: map['idDTO'] ?? '',
       nameDTO: map['nameDTO'] ?? '',
       priceDTO: map['priceDTO']?.toDouble() ?? 0.0,
       qtdDTO: map['qtdDTO']?.toInt() ?? 0,

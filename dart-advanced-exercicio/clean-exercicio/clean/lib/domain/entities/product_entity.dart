@@ -5,8 +5,10 @@ class ProductEntity {
   int qtd;
   String brand;
   String category;
+  int id;
 
   ProductEntity({
+    required this.id,
     required this.name,
     required this.price,
     required this.qtd,
@@ -56,6 +58,6 @@ class ProductEntity {
 
   @override
   String toString() {
-    return 'ProductEntity(name: $name, price: $price, qtd: $qtd, brand: $brand, category: $category)';
+    return 'ProductEntity(name: $name, price: $price, qtd: $qtd, brand: $brand, category: $category, id: $id)';
   }
 }

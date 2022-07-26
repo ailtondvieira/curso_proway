@@ -1,5 +1,6 @@
 
-import '../entities/product_entity.dart';
+
+import '../../entities/product_entity.dart';
 
 abstract class IGetAllProductsUsecase {
   List<ProductEntity> call();
