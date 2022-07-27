@@ -1,8 +1,8 @@
 
-import 'package:clean/domain/entities/cellphone_entity.dart';
-import 'package:clean/domain/entities/product_entity.dart';
-import 'package:clean/infra/datasources/cellphone/get_cellphone_by_brand_datasource.dart';
-import 'package:clean/infra/datasources/local/get_all_products_local_datasource.dart';
+import '../../../../domain/entities/cellphone_entity.dart';
+import '../../../../domain/entities/product_entity.dart';
+import '../../cellphone/get_cellphone_by_brand_datasource.dart';
+import '../get_all_products_local_datasource.dart';
 
 class GetCellphoneByBrandLocalDatasource implements GetCellphoneByBrandDatasource{
   @override
@@ -18,7 +18,7 @@ class GetCellphoneByBrandLocalDatasource implements GetCellphoneByBrandDatasourc
       CellPhoneEntity(id: 4, price: 3000, qtd: 1, brand: "Microsoft"),
     ];
     for(CellPhoneEntity cell in listCell) {
-      await Future.delayed(const Duration(milliseconds: 5));
+      await Future.delayed(const Duration(seconds: 1));
       if (cell.brand == brand){
         cellsel.add(cell);
       }

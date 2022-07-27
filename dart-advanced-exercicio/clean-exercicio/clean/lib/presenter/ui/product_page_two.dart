@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:clean/infra/dtos/products_dto.dart';
-import 'package:clean/presenter/controllers/cellphone_controller.dart';
-import 'package:clean/presenter/ui/product_page_three.dart';
+import '../controllers/cellphone_controller.dart';
+import 'product_page_three.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/get_it.dart';
@@ -19,6 +18,7 @@ class ProductPageTwo extends StatefulWidget {
 class _ProductPageTwoState extends State<ProductPageTwo> {
   ProductController controller = getIt.get<ProductController>();
   CellphoneController controllerCell = getIt.get<CellphoneController>();
+  Widget widsel = const Text("");
 
   @override
   Widget build(BuildContext context) {
@@ -32,25 +32,35 @@ class _ProductPageTwoState extends State<ProductPageTwo> {
             children: [
               IconButton(
                 onPressed: () async {
-                   await controllerCell.getCellphoneByBrand("Samsung");
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const ProductPageThree();
-                      },
-                    ),
+                  setState(
+                    () {
+                      widsel = const CircularProgressIndicator(
+                        color: Colors.white,
+                      );
+                    },
                   );
+                  await controllerCell.getCellphoneByBrand("Samsung");
+                  if (mounted) {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: ((context) {
+                          return const ProductPageThree();
+                        }),
+                      ),
+                    );
+                  }
                 },
                 icon: const Icon(
                   Icons.arrow_back,
                   color: Colors.white,
-                  ),
+                ),
               ),
             ],
           ),
           const SizedBox(
-            height: 630,
+            height: 300,
           ),
+          widsel,
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,10 +73,7 @@ class _ProductPageTwoState extends State<ProductPageTwo> {
                     controller.selectedProduct
                         .toString()
                         .replaceAll("ProductEntity", ""),
-                    style: const TextStyle(
-                      fontSize: 15,
-                      color: Colors.white
-                      ),
+                    style: const TextStyle(fontSize: 15, color: Colors.white),
                     minFontSize: 10,
                     maxLines: 4,
                     overflow: TextOverflow.ellipsis,
@@ -74,7 +81,7 @@ class _ProductPageTwoState extends State<ProductPageTwo> {
                 ),
               ),
             ],
-          ),
+          )
         ],
       ),
     );

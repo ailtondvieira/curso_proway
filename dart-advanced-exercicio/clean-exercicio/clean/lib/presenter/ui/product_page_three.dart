@@ -1,5 +1,5 @@
-import 'package:clean/presenter/controllers/cellphone_controller.dart';
-import 'package:clean/presenter/ui/product_page_two.dart';
+import '../controllers/cellphone_controller.dart';
+import 'product_page_two.dart';
 import 'package:flutter/material.dart';
 
 import '../../core/get_it.dart';

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:clean/domain/entities/cellphone_entity.dart';
+import '../../domain/entities/cellphone_entity.dart';
 
 class CellphoneDto extends CellPhoneEntity {
   double priceDTO;

@@ -1,7 +1,7 @@
 
-import 'package:clean/domain/entities/cellphone_entity.dart';
-import 'package:clean/domain/repositories/cellphone/get_cellphone_by_brand_repository.dart';
-import 'package:clean/infra/datasources/cellphone/get_cellphone_by_brand_datasource.dart';
+import '../../../domain/entities/cellphone_entity.dart';
+import '../../../domain/repositories/cellphone/get_cellphone_by_brand_repository.dart';
+import '../../datasources/cellphone/get_cellphone_by_brand_datasource.dart';
 
 class GetCellphoneByBrandRepositoryImpl implements GetCellphoneByBrandRepository {
 final GetCellphoneByBrandDatasource _getCellphoneByBrandDatasource;
