@@ -1,14 +1,9 @@
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-void main() {
-  runApp(
-    const ProviderScope(
-      child: MyApp(),
-    ),
-  );
-}
-
+import 'home_controller.dart';
+import 'widgets/fruit_button.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -26,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 final counterProvider = StateProvider<int>((ref) => 0);
-final nameUserProvider = Provider<String>(((ref) => "Alan"));
+final nameUserProvider = ChangeNotifierProvider(((ref) => FavoritesController()));
 
 class StateManager extends HookConsumerWidget {
   final String title;
@@ -46,12 +41,20 @@ class StateManager extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              namer,
+              namer.fruit,
             ),
             Text(
               counter.state.toString(),
               style: Theme.of(context).textTheme.headline4,
             ),
+            const SizedBox(
+              height: 40,
+            ),
+            const FruitButton(fruit: "Maracujá"),
+            const FruitButton(fruit: "Uva"),
+            const FruitButton(fruit: "Maçã"),
+            const FruitButton(fruit: "Jaca"),
+            const FruitButton(fruit: "Banana"),
           ],
         ),
       ),
