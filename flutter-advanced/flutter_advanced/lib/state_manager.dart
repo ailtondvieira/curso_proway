@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
 }
 
 final counterProvider = StateProvider<int>((ref) => 0);
+final nameUserProvider = Provider<String>(((ref) => "Alan"));
 
 class StateManager extends HookConsumerWidget {
   final String title;
@@ -34,6 +35,7 @@ class StateManager extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final counter = ref.watch(counterProvider.state);
+    final namer = ref.watch(nameUserProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -43,8 +45,8 @@ class StateManager extends HookConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+            Text(
+              namer,
             ),
             Text(
               counter.state.toString(),
