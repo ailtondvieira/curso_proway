@@ -9,7 +9,6 @@ void main() {
   );
 }
 
-final counterProvider = Provider<int>((ref) => 0);
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -21,34 +20,24 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const StateManager(title: 'Flutter Demo Home Page'),
+      home: StateManager(title: 'State Manager'),
     );
   }
 }
 
-class StateManager extends StatefulWidget {
-  const StateManager({Key? key, required this.title}) : super(key: key);
+final counterProvider = StateProvider<int>((ref) => 0);
 
+class StateManager extends HookConsumerWidget {
   final String title;
+  StateManager({Key? key, required this.title}) : super(key: key);
 
   @override
-  State<StateManager> createState() => _StateManagerState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final counter = ref.watch(counterProvider.state);
 
-class _StateManagerState extends State<StateManager> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(title),
       ),
       body: Center(
         child: Column(
@@ -58,14 +47,16 @@ class _StateManagerState extends State<StateManager> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              counter.state.toString(),
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          counter.state++;
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
