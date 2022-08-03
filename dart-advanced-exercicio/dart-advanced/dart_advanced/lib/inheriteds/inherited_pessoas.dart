@@ -15,6 +15,7 @@ class IWPessoas extends InheritedWidget {
   const IWPessoas({Key? key, required this.child})
       : super(key: key, child: child);
 
+  @override
   final Widget child;
 
   static IWPessoas? of(BuildContext context) {

@@ -15,7 +15,7 @@ class ProductController {
 
   late ProductEntity? selectedProduct;
   late List<ProductEntity> allProducts;
-  
+
   void getAllProducts() {
     allProducts = _getAllProductsUsecaseImp.call();
   }

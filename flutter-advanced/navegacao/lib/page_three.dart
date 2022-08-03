@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class PageThree extends StatefulWidget {
   const PageThree({Key? key}) : super(key: key);
 
-    static const route = '/page-three';
+  static const route = '/page-three';
 
   @override
   State<PageThree> createState() => _PageThreeState();

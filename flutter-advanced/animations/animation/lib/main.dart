@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
+  runApp(MaterialApp(
     home: const HomePage(title: "Animation Implicit"),
     theme: ThemeData(
       backgroundColor: Colors.white,

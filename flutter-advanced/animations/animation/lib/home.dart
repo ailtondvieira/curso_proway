@@ -57,8 +57,9 @@ class _HomePageState extends State<HomePage> {
                   ? Color.fromARGB(255, random.nextInt(255),
                       random.nextInt(255), random.nextInt(255))
                   : Colors.black,
-              transform: Matrix4.rotationX(isClicked ? random.nextDouble()*pi : 0)
-              ..rotateY(isClicked ? random.nextDouble()*360 : 0),
+              transform:
+                  Matrix4.rotationX(isClicked ? random.nextDouble() * pi : 0)
+                    ..rotateY(isClicked ? random.nextDouble() * 360 : 0),
             ),
           ],
         ),

@@ -7,9 +7,8 @@ void main(List<String> args) {
   setupDependencies();
   runApp(
     const MaterialApp(
-    home: ProductPage(),
-    debugShowCheckedModeBanner: false,
-  ),
+      home: ProductPage(),
+      debugShowCheckedModeBanner: false,
+    ),
   );
-
 }

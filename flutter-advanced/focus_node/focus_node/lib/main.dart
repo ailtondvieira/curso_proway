@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'page_two.dart';
 
 import 'home.dart';
 
@@ -9,5 +8,3 @@ void main() {
     debugShowCheckedModeBanner: false,
   ));
 }
-
-

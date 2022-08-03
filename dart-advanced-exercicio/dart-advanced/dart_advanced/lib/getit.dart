@@ -24,11 +24,8 @@ class AppModel {
   String userName = "Renan";
   String dateTemp = "11 de agosto de 1218";
 }
+
 class Modelo {
   String userName = "Cellbit";
   String dateTemp = "11 de Fevereiro de 1997";
 }
-
-
-
-

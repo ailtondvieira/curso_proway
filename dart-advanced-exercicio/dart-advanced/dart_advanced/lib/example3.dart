@@ -27,6 +27,6 @@ void main(List<String> args) async {
 
 void workerIsolate(SendPort sendPort) async {
   final resposta =
-      await Future.delayed(Duration(seconds: 2), (() => 'Conteúdo do Arquivo'));
+      await Future.delayed(const Duration(seconds: 2), (() => 'Conteúdo do Arquivo'));
   Isolate.exit(sendPort, resposta);
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:inherited_widget/inheriteds/inherited_date.dart';
 
 import 'card_weather_home.dart';
 import 'container_lamp_home.dart';

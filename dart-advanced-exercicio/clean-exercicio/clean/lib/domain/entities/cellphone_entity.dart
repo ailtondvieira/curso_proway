@@ -4,7 +4,7 @@ class CellPhoneEntity {
   String brand;
   int id;
 
- CellPhoneEntity({
+  CellPhoneEntity({
     required this.id,
     required this.price,
     required this.qtd,

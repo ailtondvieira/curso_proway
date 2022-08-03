@@ -1,7 +1,7 @@
 import 'dart:isolate';
 
 void sayhii(var msg) {
-  print('execution from sayhii ... the message is :${msg}');
+  print('execution from sayhii ... the message is :$msg');
 }
 
 void main() {

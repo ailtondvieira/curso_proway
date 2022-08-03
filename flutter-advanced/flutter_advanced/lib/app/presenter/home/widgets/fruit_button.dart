@@ -12,7 +12,6 @@ class FruitButton extends HookConsumerWidget {
     return ElevatedButton(
       onPressed: (() {
         ref.watch(nameUserProvider).changeFruit(fruit);
-        
       }),
       child: Text(fruit),
     );

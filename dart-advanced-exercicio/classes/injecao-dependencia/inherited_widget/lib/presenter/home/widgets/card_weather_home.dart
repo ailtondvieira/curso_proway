@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:inherited_widget/core/app_getit.dart';
 import 'package:inherited_widget/core/app_model.dart';
 
-import '../../../inheriteds/inherited_date.dart';
 
 class CardHeaderHome extends StatelessWidget {
   const CardHeaderHome({Key? key}) : super(key: key);

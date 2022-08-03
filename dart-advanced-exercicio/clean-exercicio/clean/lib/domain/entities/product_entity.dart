@@ -1,4 +1,3 @@
-
 class ProductEntity {
   String name;
   double price;

@@ -18,25 +18,24 @@ class ProductsDto extends ProductEntity {
     required this.brandDTO,
     required this.categoryDTO,
   }) : super(
-    id: idDTO,
+          id: idDTO,
           brand: brandDTO,
           name: nameDTO,
           price: priceDTO,
           qtd: qtdDTO,
           category: categoryDTO,
         );
-        
 
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
-  
+
     result.addAll({'nameDTO': nameDTO});
     result.addAll({'priceDTO': priceDTO});
     result.addAll({'qtdDTO': qtdDTO});
     result.addAll({'brandDTO': brandDTO});
     result.addAll({'categoryDTO': categoryDTO});
     result.addAll({'idDTO': idDTO});
-  
+
     return result;
   }
 
@@ -53,8 +52,8 @@ class ProductsDto extends ProductEntity {
 
   String toJson() => json.encode(toMap());
 
-  factory ProductsDto.fromJson(String source) => ProductsDto.fromMap(json.decode(source));
-
+  factory ProductsDto.fromJson(String source) =>
+      ProductsDto.fromMap(json.decode(source));
 
   @override
   String toString() {

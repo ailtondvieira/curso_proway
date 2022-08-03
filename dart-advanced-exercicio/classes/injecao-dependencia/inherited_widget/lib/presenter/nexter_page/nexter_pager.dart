@@ -9,7 +9,8 @@ class NexterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical (top: Radius.circular(12))),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(12))),
         backgroundColor: const Color.fromARGB(192, 99, 167, 196),
         title: const Text("Clouds"),
         elevation: 0,

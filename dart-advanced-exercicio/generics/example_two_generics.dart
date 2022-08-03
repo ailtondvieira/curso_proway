@@ -16,4 +16,3 @@ class MinhaClasse<T> {
     print('$objeto - ${objeto.runtimeType}');
   }
 }
-

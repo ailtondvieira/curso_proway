@@ -19,20 +19,12 @@ class People {
   }
 }
 
-class Ailton extends People with Code {
+class Ailton extends People with Code {}
 
-}
+class Maria extends People {}
 
-class Maria extends People {
-
-}
-
-class Pedro extends People with Code {
-
-}
+class Pedro extends People with Code {}
 
 mixin Code {
-  void coding() {
-
-  }
+  void coding() {}
 }

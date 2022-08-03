@@ -14,9 +14,7 @@ class MusicPlay {
 }
 
 class Mp3MusicPlay extends MusicPlay {
-  void play(fileExtension) {
-   
-  }
+  void play(fileExtension) {}
 }
 
 // Retornando valores de tipos diferentes...

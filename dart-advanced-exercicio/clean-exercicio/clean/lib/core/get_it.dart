@@ -65,7 +65,7 @@ void setupDependencies() {
       getIt.get<GetCellphoneByBrandRepositoryImpl>(),
     ),
   );
-  
+
   getIt.registerSingleton<CellphoneController>(
     CellphoneController(
       getIt.get<GetCellphoneByBrandUsecaseImpl>(),

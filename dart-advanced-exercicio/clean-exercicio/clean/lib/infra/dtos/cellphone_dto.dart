@@ -22,12 +22,12 @@ class CellphoneDto extends CellPhoneEntity {
 
   Map<String, dynamic> toMap() {
     final result = <String, dynamic>{};
-  
+
     result.addAll({'priceDTO': priceDTO});
     result.addAll({'qtdDTO': qtdDTO});
     result.addAll({'brandDTO': brandDTO});
     result.addAll({'idDTO': idDTO});
-  
+
     return result;
   }
 
@@ -42,7 +42,8 @@ class CellphoneDto extends CellPhoneEntity {
 
   String toJson() => json.encode(toMap());
 
-  factory CellphoneDto.fromJson(String source) => CellphoneDto.fromMap(json.decode(source));
+  factory CellphoneDto.fromJson(String source) =>
+      CellphoneDto.fromMap(json.decode(source));
 
   @override
   String toString() {

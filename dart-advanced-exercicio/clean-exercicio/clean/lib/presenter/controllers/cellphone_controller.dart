@@ -1,8 +1,6 @@
-
 import '../../domain/entities/cellphone_entity.dart';
 
 import '../../domain/usecases/get_cellphone_by_brand/get_cellphone_by_brand_usecase_impl.dart';
-import 'product_controller.dart';
 
 class CellphoneController {
   final GetCellphoneByBrandUsecaseImpl? _getCellphoneByBrandUsecaseImpl;

@@ -11,8 +11,7 @@ void main(List<String> args) {
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
-      builder: (context) => 
-      MaterialApp(
+      builder: (context) => MaterialApp(
         useInheritedMediaQuery: true,
         builder: DevicePreview.appBuilder,
         locale: DevicePreview.locale(context),
@@ -67,7 +66,8 @@ class _MainState extends State<Main> {
             //     );
             //   },
             // ),
-            Text("${getIt.get<Modelo>().dateTemp} e ${getIt.get<Modelo>().userName}"),
+            Text(
+                "${getIt.get<Modelo>().dateTemp} e ${getIt.get<Modelo>().userName}"),
             Column(
               children: [
                 Center(

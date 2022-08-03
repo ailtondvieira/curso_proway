@@ -34,7 +34,6 @@ class ContratoMenorAprendiz implements Remuneravel {
   void remuneracao() {
     print('Pagando o jovem aprendiz');
   }
-
 }
 
 class Estagio implements Remuneravel {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ContainerPlayerHome extends StatelessWidget {
-   const ContainerPlayerHome({
+  const ContainerPlayerHome({
     Key? key,
   }) : super(key: key);
 

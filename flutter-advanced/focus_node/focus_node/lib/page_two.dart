@@ -26,7 +26,7 @@ class _PageTwoState extends State<PageTwo> {
               // },
               autovalidateMode: AutovalidateMode.always,
               validator: ((value) {
-                if(value!.isEmpty) {
+                if (value!.isEmpty) {
                   return "A senha tá vazia";
                 } else {
                   return null;
@@ -50,14 +50,15 @@ class _PageTwoState extends State<PageTwo> {
                 hintText: 'email',
               ),
             ),
-            ElevatedButton(onPressed: () {
-              if(keyForm.currentState!.validate()) {
-                print("tá validado");
-              }
-              else {
-                print("tá errado");
-              }
-            }, child: const Text("Registrar"))
+            ElevatedButton(
+                onPressed: () {
+                  if (keyForm.currentState!.validate()) {
+                    print("tá validado");
+                  } else {
+                    print("tá errado");
+                  }
+                },
+                child: const Text("Registrar"))
           ],
         ),
       )),

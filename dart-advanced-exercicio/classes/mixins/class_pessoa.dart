@@ -14,11 +14,15 @@ class Pessoa {
 }
 
 class Pedrinho extends Pessoa {}
+
 class Maria extends Pessoa {}
+
 class Ailton extends Pessoa with Codar, NaoDormir {
   // Com a palavra with eu uso os Mixins
 }
+
 class Carlos extends Pessoa {}
+
 class Julia extends Pessoa with Codar, NaoDormir {}
 
 mixin Codar {

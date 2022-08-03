@@ -52,7 +52,7 @@ class ContainerLampHome extends StatelessWidget {
                 size: 40,
                 color: colorIcon,
               ),
-               Icon(
+              Icon(
                 iconeCircle,
                 color: colorIcon,
               ),

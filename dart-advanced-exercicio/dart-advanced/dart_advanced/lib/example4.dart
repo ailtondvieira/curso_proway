@@ -10,16 +10,16 @@ Future<void> start() async {
   ReceivePort receiverPort = ReceivePort();
   isolate = await Isolate.spawn(runTimer, receiverPort.sendPort);
   receiverPort.listen((data) {
-    stdout.write('Receiving: ' + data + ', ');
+    stdout.write('${'Receiving: ' + data}, ');
   });
 }
 
 void runTimer(sendPort) {
   int count = 0;
-  Timer.periodic(new Duration(seconds: 1), (Timer t) {
+  Timer.periodic(Duration(seconds: 1), (Timer t) {
     count++;
-    String msg = 'notification ' + count.toString();
-    stdout.write('Sending: ' + msg + ' -');
+    String msg = 'notification $count';
+    stdout.write('Sending: $msg -');
     sendPort.send(msg);
   });
 }

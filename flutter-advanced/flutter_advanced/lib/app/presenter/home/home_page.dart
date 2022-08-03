@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -21,11 +20,12 @@ class MyApp extends StatelessWidget {
 }
 
 final counterProvider = StateProvider<int>((ref) => 0);
-final nameUserProvider = ChangeNotifierProvider(((ref) => FavoritesController()));
+final nameUserProvider =
+    ChangeNotifierProvider(((ref) => FavoritesController()));
 
 class StateManager extends HookConsumerWidget {
   final String title;
-  StateManager({Key? key, required this.title}) : super(key: key);
+  const StateManager({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

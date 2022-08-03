@@ -20,8 +20,8 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Center(
             child: InkWell(
           onTap: (() {
-            Navigator.of(context).push(
-                MaterialPageRoute(builder: ((context) => const ViewImageHome())));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: ((context) => const ViewImageHome())));
           }),
           child: Hero(
             tag: 'img1',

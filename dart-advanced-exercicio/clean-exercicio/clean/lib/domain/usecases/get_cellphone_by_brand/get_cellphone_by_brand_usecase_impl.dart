@@ -1,4 +1,3 @@
-
 import '../../entities/cellphone_entity.dart';
 import '../../repositories/cellphone/get_cellphone_by_brand_repository.dart';
 import 'get_cellphone_by_brand_usecase.dart';
