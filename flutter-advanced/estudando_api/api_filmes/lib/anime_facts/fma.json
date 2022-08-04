@@ -1,0 +1,39 @@
+{
+    "success": true,
+    "img": "https://m.media-amazon.com/images/M/MV5BZmEzN2YzOTItMDI5MS00MGU4LWI1NWQtOTg5ZThhNGQwYTEzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_.jpg",
+    "total_facts": 8,
+    "data": [
+        {
+            "fact_id": 1,
+            "fact": "Ishvalans And Ametris Conflict Is Based On Hokkaido s Ainu People"
+        },
+        {
+            "fact_id": 2,
+            "fact": "Arakawa Actually Bought Military Prop Guns For Drawing References"
+        },
+        {
+            "fact_id": 3,
+            "fact": "Arakawa Interviewed WWII Japanese Veterans For The Ishval War Arc"
+        },
+        {
+            "fact_id": 4,
+            "fact": "Law Of Equivalent Exchange Is Not Strictly Based On Eastern Or Western Alchemy"
+        },
+        {
+            "fact_id": 5,
+            "fact": "The Military Officers Are Named After Military Vehicles"
+        },
+        {
+            "fact_id": 6,
+            "fact": "Arakawa s First Name Is Hiromi"
+        },
+        {
+            "fact_id": 7,
+            "fact": "Truth Is A Mirrored Version Of Whoever Enters The Gate"
+        },
+        {
+            "fact_id": 8,
+            "fact": "There Is Only One Known Photo Of Hiromu Arakawa"
+        }
+    ]
+}

@@ -21,20 +21,26 @@ class _GetApiPageState extends State<GetApiPage> {
 
   Future<CepModel?> getInfoByCep() async {
     String cep = controller.text.replaceAll(RegExp(r'[^\w\s]+'), '');
-    String url = 'https://viacep.com.br/ws/89035360/json/'; //$cep/json/';
+    String url = 'https://viacep.com.br/ws/$cep/json/'; //$cep/json/';
     try {
-      var response = await Dio().get(url);
-      if (response.data["erro"] != "true") {
-        cepModel = CepModel.fromMap(response.data);
-      } else {}
-      //setState(() {});
+      if (cep.length >= 8) {
+        var response = await Dio().get(url);
+        if (response.data["erro"] != "true") {
+          cepModel = CepModel.fromMap(response.data);
+          return cepModel;
+        } else {
+          cepModel = null;
+        }
+      }
     } catch (e) {
       if (kDebugMode) {
         print(e);
       }
+    } finally {
+      setState(() {});
     }
 
-    return cepModel;
+    return null;
   }
 
   @override
@@ -66,8 +72,9 @@ class _GetApiPageState extends State<GetApiPage> {
               future: getInfoByCep(),
               builder: (context, AsyncSnapshot<CepModel?> snapshot) {
                 if (snapshot.data == null) {
-                  const Text('');
+                  return const Text('Sem resultados');
                 }
+                cepModel = snapshot.data;
                 return InkWell(
                   borderRadius: BorderRadius.circular(16),
                   onTap: () {},
