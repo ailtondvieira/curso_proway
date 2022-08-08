@@ -28,6 +28,12 @@ class _HomePageState extends State<HomePage> {
     setState(() {});
   }
 
+  removeAllStorage() async {
+    final prefss = await _prefs;
+    await prefss.clear();
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,6 +75,12 @@ class _HomePageState extends State<HomePage> {
               deleteInfoStorage();
             },
             child: const Icon(Icons.delete),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              removeAllStorage();
+            },
+            child: const Icon(Icons.delete_forever),
           ),
         ],
       ),
