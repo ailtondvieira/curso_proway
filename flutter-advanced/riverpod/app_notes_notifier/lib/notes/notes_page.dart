@@ -1,11 +1,8 @@
 import 'package:app_notes_notifier/notes/note_model.dart';
-import 'package:app_notes_notifier/notes/notes_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final notesProvider = StateNotifierProvider<NotesNotifier, List<NoteModel>>(
-  (ref) => NotesNotifier(),
-);
+import 'notes_provider.dart';
 
 class NotesPage extends HookConsumerWidget {
   NotesPage({Key? key}) : super(key: key);
