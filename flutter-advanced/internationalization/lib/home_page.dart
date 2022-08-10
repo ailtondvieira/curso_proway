@@ -31,8 +31,10 @@ class HomePage extends HookConsumerWidget {
               icon: const Icon(Icons.save),
               tooltip: "Botão Save",
             ),
-            const SizedBox(
-              height: 20,
+            const ExcludeSemantics(
+              child: SizedBox(
+                height: 20,
+              ),
             ),
             Semantics(
               hint: "Image",
