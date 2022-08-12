@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/body_movies_page.dart';
+
 // 53b9d940b2d4d2199b4e18d0a05f3d52
 
 class MoviesPage extends StatelessWidget {
@@ -11,7 +13,7 @@ class MoviesPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Movies'),
       ),
-      body: Container(),
+      body: const BodyMoviesPage(),
     );
   }
 }
