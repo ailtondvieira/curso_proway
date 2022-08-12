@@ -39,6 +39,7 @@ class CardMovie extends StatelessWidget {
                           height: 50,
                           width: 50,
                           child: CircularProgressIndicator(
+                            strokeWidth: 5,
                             value: value2,
                             color: getColorProgress(movie.voteAverage / 10),
                           ),

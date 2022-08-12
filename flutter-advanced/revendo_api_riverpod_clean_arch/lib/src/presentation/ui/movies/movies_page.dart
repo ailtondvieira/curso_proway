@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:revendo_api_riverpod_clean_arch/src/presentation/ui/movies/widgets/drawer_movies.dart';
 
 import 'widgets/body_movies_page.dart';
 
@@ -10,9 +11,8 @@ class MoviesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Movies'),
-      ),
+      drawer: const DrawerMovies(),
+      appBar: AppBar(title: const Text('Movies')),
       body: const BodyMoviesPage(),
     );
   }
