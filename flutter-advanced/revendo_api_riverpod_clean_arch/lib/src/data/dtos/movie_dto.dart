@@ -82,8 +82,7 @@ class MovieDto extends MovieEntity {
 
   String toJson() => json.encode(toMap());
 
-  factory MovieDto.fromJson(String source) =>
-      MovieDto.fromMap(json.decode(source));
+  factory MovieDto.fromJson(String source) => MovieDto.fromMap(json.decode(source));
 
   @override
   String toString() {
