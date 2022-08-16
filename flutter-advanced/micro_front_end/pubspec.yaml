@@ -40,6 +40,8 @@ dependencies:
     path: packages/micro_apps/home
   login: 
     path: packages/micro_apps/login
+  products:
+    path: packages/micro_apps/products
 
 dev_dependencies:
   flutter_test:

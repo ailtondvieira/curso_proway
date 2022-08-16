@@ -4,6 +4,7 @@ import 'package:core/app/microapp.dart';
 import 'package:flutter/material.dart';
 import 'package:home/app/micro_app_home_resolver.dart';
 import 'package:login/app/micro_app_login_resolver.dart';
+import 'package:products/micro_apps_products.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,5 +30,5 @@ class MyApp extends StatelessWidget with BaseApp {
   Map<String, WidgetBuilderArgs> get baseRoutes => {};
 
   @override
-  List<Microapp> get microApps => [MicroAppLoginResolver(), MicroAppHomeResolver()];
+  List<Microapp> get microApps => [MicroAppLoginResolver(), MicroAppHomeResolver(), MicroAppProductsResolver()];
 }
