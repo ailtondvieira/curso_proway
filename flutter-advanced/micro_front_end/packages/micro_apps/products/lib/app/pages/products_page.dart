@@ -1,5 +1,4 @@
-import 'package:commons/commons.dart';
-import 'package:core/app/micro_core_utils.dart';
+import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 
 class ProductsPage extends StatefulWidget {
